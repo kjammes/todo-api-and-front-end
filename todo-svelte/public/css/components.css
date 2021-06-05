@@ -1,0 +1,29 @@
+.form__input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.form__input-group input,
+.form__input-group textarea {
+  width: 100%;
+} 
+
+.btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid hsl(270, 50%, 40%);
+  background-color: white;
+  color: rebeccapurple;
+  max-height: 2.5rem;
+  height: 2.5rem;
+}
+
+.btn:hover {
+  padding: 0.4rem 1rem;
+  transition: all .4s;
+  border: 1px solid white;
+  background-color: rebeccapurple;
+  color: white;
+}

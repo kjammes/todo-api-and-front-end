@@ -1,0 +1,11 @@
+.card {
+  width: 90%;
+  max-width: 60ch;
+  background-color: white;
+  padding: 1rem;
+  margin: .5rem auto;
+  box-shadow: -4px 5px 17px -6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -4px 5px 17px -6px rgba(0,0,0,0.5);
+  -moz-box-shadow: -4px 5px 17px -6px rgba(0,0,0,0.5);
+}
+
