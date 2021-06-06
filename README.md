@@ -10,7 +10,7 @@ You also need to have npm and mysql installed as a pre-requisite.
 Inside util/db.js file you can change username and password according to your machine.
 
 For the front-end part I've used svelte.
-To run svelte applicaiton:0
+To run svelte applicaiton:
 1. Navigate into todo-svelte directory.
 2. Open up a terminal/cli in that directory.
 3. Execute command npm run dev.
