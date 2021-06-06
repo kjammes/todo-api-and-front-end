@@ -1,6 +1,18 @@
 <script lang="ts">
-  export let task:string;
+	import { createEventDispatcher } from 'svelte';
+
+	export let task:string;
   export let id:number;
+
+	const dispatch = createEventDispatcher();
+
+	function hideEdit() {
+		dispatch('hide-edit', {
+			show: false,
+			task: task,
+			id:id
+		});
+	}
 
   function saveTask() {
     fetch(
@@ -18,7 +30,8 @@
     )
     .then(result => result.json())
     .then(result => {
-      console.log(result);
+      // console.log(result);
+			hideEdit();
     })
     .catch(err => console.log(err));
   }
@@ -39,7 +52,7 @@
 			bind:value={task}
 			></textarea>
 		</div>
-		<button type="submit" class="btn"> Save Changes </button>
+		<button type="submit" class="btn" on:click={saveTask}> Save Changes </button>
 	</form>
 
 </section>

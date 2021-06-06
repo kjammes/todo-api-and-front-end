@@ -8,6 +8,20 @@
 
   let showEditTask = false;
 
+  function handleToggleEdit(event) {
+    const id = event.detail.id;
+    const task = event.detail.task;
+    const show = event.detail.show;
+
+    showEditTask = show;
+    for(let taskObj of taskDetails) {
+      if(taskObj.id == id) {
+        taskObj.task = task;
+        break;
+      }
+    }
+  }
+
   function deleteTask(id: number) {
     console.log(id);
     fetch(
@@ -20,15 +34,15 @@
       return result.json();
     })
     .then(result => {
-      console.log(result);
+      // console.log(result);
       taskDetails = taskDetails.filter(task => task.id !== id);
     })
     .catch(err => console.log(err));
   }
 
   function updateTask(id:number, task:string) {
-    console.log(id);
-    console.log(task);
+    // console.log(id);
+    // console.log(task);
     showEditTask = true;
   }
 </script>
@@ -56,7 +70,7 @@
       {/if}
     </div>
   {:else}
-    <EditTask id={task.id} task={task.task} />
+    <EditTask id={task.id} task={task.task} on:hide-edit={handleToggleEdit}/>
   {/if}
 {/each}
 
