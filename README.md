@@ -1,5 +1,6 @@
 # todo-api-and-front-end
-This repository contains a RESTFul API for performing all four CRUD operations.
+
+This repository contains a RESTFul API for performing all four CRUD operations using express js and MySQL and a simple svelte front-end.
 
 It has simple RESTAPI which we can plug into any front-end application.
 The application could we a web application or mobile application.
@@ -11,8 +12,9 @@ Inside util/db.js file you can change username and password according to your ma
 
 For the front-end part I've used svelte.
 To run svelte applicaiton:
+
 1. Navigate into todo-svelte directory.
 2. Open up a terminal/cli in that directory.
 3. Execute command npm run dev.
 4. Open browser and go to http://localhost:5000, to see application running.
-5.Play around.
+   5.Play around.
