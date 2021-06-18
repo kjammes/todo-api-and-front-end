@@ -30,7 +30,7 @@
     )
     .then(result => result.json())
     .then(result => {
-      // console.log(result);
+      console.log(result);
 			hideEdit();
     })
     .catch(err => console.log(err));

@@ -20,6 +20,7 @@
         break;
       }
     }
+    
   }
 
   function deleteTask(id: number) {
@@ -34,15 +35,13 @@
       return result.json();
     })
     .then(result => {
-      // console.log(result);
+      console.log(result);
       taskDetails = taskDetails.filter(task => task.id !== id);
     })
     .catch(err => console.log(err));
   }
 
   function updateTask(id:number, task:string) {
-    // console.log(id);
-    // console.log(task);
     showEditTask = true;
   }
 </script>
