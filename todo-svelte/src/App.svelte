@@ -1,5 +1,7 @@
 <script lang="ts">
 	import TaskComp from './TaskComp.svelte';
+	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 
 	let task: string = "";
 	let tasks: {
@@ -24,10 +26,17 @@
 			return;
 		}
 		
-		if( !tasks ){
+		console.log("Inside saveTask");
+		
+
+		if( !tasks.length ){
+			console.log("Inside if not tasks");
+			
 			tasks = [{id:1, task: task}];
 		}
 		else {
+			console.log("If tasks is not empty");
+			
 			tasks.push(
 				{id: tasks[tasks.length-1].id+1, task: task}
 			);
@@ -54,6 +63,8 @@
 	}
 </script>
 
+<Header title="Task Tracker"/>
+
 <main class="card">
 	<h1>Add a task to complete</h1>
 
@@ -75,6 +86,8 @@
 </main>
 <TaskComp taskDetails={tasks}/>
 
+<Footer/>
+
 <style>
 	main {
 	  margin: 2rem auto;
@@ -84,6 +97,8 @@
 	h1 {
 		width: 100%;
 		text-align: center;
+		font-size: 1.5rem;
+		font-weight: normal;
 	}
 
 	textarea {

@@ -9,15 +9,22 @@
 .form__input-group input,
 .form__input-group textarea {
   width: 100%;
+  padding: 1rem;
+  border: 1px solid hsl(270, 50%, 40%);
+  border-radius: 1%;
 } 
+
+.form__input-group label {
+  margin: 0 0 .5rem;
+}
 
 .btn {
   padding: 0.4rem 1rem;
   border: 1px solid hsl(270, 50%, 40%);
   background-color: white;
   color: rebeccapurple;
-  max-height: 2.5rem;
-  height: 2.5rem;
+  border-radius: 4%;
+  font-size: 1rem;
 }
 
 .btn:hover {
