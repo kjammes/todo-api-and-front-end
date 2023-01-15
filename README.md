@@ -17,4 +17,4 @@ To run svelte applicaiton:
 2. Open up a terminal/cli in that directory.
 3. Execute command npm run dev.
 4. Open browser and go to http://localhost:5000, to see application running.
-   5.Play around.
+5. Play around.
